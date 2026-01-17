@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UDDoubleD</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <img
+      src="/image/black_ribbon_top_right.png"
+      class="black-ribbon stick-top stick-right"
+      alt=""
+    />
+    <header class="site-header">
+      <div class="brand">
+        <img class="brand__logo" src="image/logonobg.png" alt="UDDoubleD" />
+        <span class="brand__name">UDDoubleD</span>
+      </div>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="เมนูหลัก">
+          <a href="index.html">หน้าแรก</a>
+          <a href="member.html">สมาชิก</a>
+          <a href="policy.html">นโยบาย</a>
+          <a href="qa.html">Q&A</a>
+          <a href="contact.html">ติดต่อ</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="สลับโหมดกลางวันและกลางคืน"
+        >
+          <span class="theme-toggle__text" id="theme-text"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="page">
+      <section id="home" class="section">
+        <h1>ยินดีต้อนรับสู่พรรคสภานักเรียน เบอร์ 1</h1>
+        <p>ร่วมกันสร้างโรงเรียนที่น่าอยู่และเป็นมิตรกับทุกคน</p>
+      </section>
+      <section id="members" class="section">
+        <h2>สมาชิก</h2>
+        <p>แนะนำทีมงานและตัวแทนของพรรค</p>
+      </section>
+      <section id="policy" class="section">
+        <h2>นโยบาย</h2>
+        <p>รวมนโยบายและแนวทางการพัฒนาของพรรค</p>
+      </section>
+      <section id="contact" class="section">
+        <h2>ติดต่อ</h2>
+        <p>ช่องทางติดต่อและข้อมูลเพิ่มเติม</p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      Copyright © 2026 UDDoubleD. Student Council Udomdarunee School.
+    </footer>
+    <script>
+      (function () {
+        var toggleButton = document.getElementById("theme-toggle");
+        var text = document.getElementById("theme-text");
+        var body = document.body;
+        var isNight = false;
+
+        function applyTheme() {
+          body.dataset.theme = isNight ? "night" : "day";
+          text.textContent = isNight ? "☀" : "⏾";
+        }
+
+        toggleButton.addEventListener("click", function () {
+          isNight = !isNight;
+          applyTheme();
+        });
+
+        applyTheme();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UDDoubleD - สมาชิก</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <img
+      src="/image/black_ribbon_top_right.png"
+      class="black-ribbon stick-top stick-right"
+      alt=""
+    />
+    <header class="site-header">
+      <div class="brand">
+        <img class="brand__logo" src="image/logonobg.png" alt="UDDoubleD" />
+        <span class="brand__name">UDDoubleD</span>
+      </div>
+      <div class="header-actions">
+        <nav class="site-nav" aria-label="เมนูหลัก">
+          <a href="index.html">หน้าแรก</a>
+          <a href="member.html">สมาชิก</a>
+          <a href="policy.html">นโยบาย</a>
+          <a href="qa.html">Q&A</a>
+          <a href="contact.html">ติดต่อ</a>
+        </nav>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="สลับโหมดกลางวันและกลางคืน"
+        >
+          <span class="theme-toggle__text" id="theme-text"></span>
+        </button>
+      </div>
+    </header>
+    <main class="page">
+      <section id="members" class="section members-section">
+        <h2 class="members-title">คณะกรรมการนักเรียน</h2>
+        <p class="members-subtitle">ทีมงานที่พร้อมทำงานเพื่อนักเรียนทุกคน</p>
+
+        <!-- ประธาน -->
+        <div class="member-featured">
+          <div class="member-card member-card--president" 
+               data-nickname="เตย"
+               data-fullname="มนต์นภา ปีย์วราวงศ์"
+               data-position="ประธานนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.4/X"
+               data-ig="username1"
+               data-photo="image/member/เตย.jpg">
+            <div class="member-card__badge">★ ประธานนักเรียน</div>
+            <div class="member-card__photo">
+              <img src="image/member/เตย.jpg" alt="ประธานนักเรียน" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">เตย</h3>
+              <p class="member-card__fullname">มนต์นภา ปีย์วราวงศ์</p>
+              <a class="member-card__ig" href="https://instagram.com/username1" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username1
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- รองประธาน -->
+        <h3 class="members-group-title">รองประธานนักเรียน</h3>
+        <div class="members-grid members-grid--2">
+          <div class="member-card member-card--vice"
+               data-nickname="ปุณณ์"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="รองประธานนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username2"
+               data-photo="image/member/ปุณณ์.jpg">
+            <div class="member-card__badge">รองประธาน</div>
+            <div class="member-card__photo">
+              <img src="image/member/ปุณณ์.jpg" alt="รองประธาน" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ปุณณ์</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username2" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username2
+              </a>
+            </div>
+          </div>
+
+          <div class="member-card member-card--vice"
+               data-nickname="ก้อนเมฆ"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="รองประธานนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username3"
+               data-photo="image/member/ก้อนเมฆ.jpg">
+            <div class="member-card__badge">รองประธาน</div>
+            <div class="member-card__photo">
+              <img src="image/member/ก้อนเมฆ.jpg" alt="รองประธาน" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ก้อนเมฆ</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username3" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username3
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- คณะกรรมการ -->
+        <h3 class="members-group-title">คณะกรรมการนักเรียน</h3>
+        <div class="members-grid members-grid--4">
+          <!-- สมาชิกคนที่ 4 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น4"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username4"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น4</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username4" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username4
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 5 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น5"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username5"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น5</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username5" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username5
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 6 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น6"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username6"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น6</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username6" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username6
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 7 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น7"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username7"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น7</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username7" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username7
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 8 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น8"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username8"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น8</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username8" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username8
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 9 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น9"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username9"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น9</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username9" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username9
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 10 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น10"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username10"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น10</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username10" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username10
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 11 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น11"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username11"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น11</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username11" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username11
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 12 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น12"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username12"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น12</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username12" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username12
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 13 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น13"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username13"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น13</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username13" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username13
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 14 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น14"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username14"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น14</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username14" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username14
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 15 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น15"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username15"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น15</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username15" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username15
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 16 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น16"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username16"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น16</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username16" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username16
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 17 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น17"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username17"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น17</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username17" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username17
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 18 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น18"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username18"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น18</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username18" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username18
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 19 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น19"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username19"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น19</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username19" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username19
+              </a>
+            </div>
+          </div>
+
+          <!-- สมาชิกคนที่ 20 -->
+          <div class="member-card member-card--committee"
+               data-nickname="ชื่อเล่น20"
+               data-fullname="ชื่อจริง นามสกุล"
+               data-position="กรรมการนักเรียน"
+               data-birthday="XX/XX/XXXX"
+               data-class="ม.X/X"
+               data-ig="username20"
+               data-photo="image/member/default.jpg">
+            <div class="member-card__photo">
+              <img src="image/member/default.jpg" alt="กรรมการ" onerror="this.style.display='none'" />
+              <div class="member-card__photo-placeholder">👤</div>
+            </div>
+            <div class="member-card__info">
+              <h3 class="member-card__nickname">ชื่อเล่น20</h3>
+              <p class="member-card__fullname">ชื่อจริง นามสกุล</p>
+              <a class="member-card__ig" href="https://instagram.com/username20" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+                <span class="ig-icon">📷</span> @username20
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="member-modal" id="member-modal">
+      <div class="member-modal__overlay"></div>
+      <div class="member-modal__content">
+        <button class="member-modal__close" aria-label="ปิด">&times;</button>
+        <div class="member-modal__photo">
+          <img id="modal-photo" src="" alt="" />
+        </div>
+        <div class="member-modal__info">
+          <span class="member-modal__badge" id="modal-badge"></span>
+          <h3 class="member-modal__nickname" id="modal-nickname"></h3>
+          <p class="member-modal__fullname" id="modal-fullname"></p>
+          <div class="member-modal__details">
+            <div class="member-modal__detail">
+              <span class="detail-icon">🎂</span>
+              <span class="detail-label">วันเกิด</span>
+              <span class="detail-value" id="modal-birthday"></span>
+            </div>
+            <div class="member-modal__detail">
+              <span class="detail-icon">🏫</span>
+              <span class="detail-label">ชั้น/ห้อง</span>
+              <span class="detail-value" id="modal-class"></span>
+            </div>
+          </div>
+          <a class="member-modal__ig" id="modal-ig" href="" target="_blank" rel="noopener">
+            <span class="ig-icon">📷</span> <span id="modal-ig-text"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+        Copyright © 2026 UDDoubleD. Student Council Udomdarunee School.
+    </footer>
+    <script>
+      (function () {
+        // Theme toggle
+        var toggleButton = document.getElementById("theme-toggle");
+        var text = document.getElementById("theme-text");
+        var body = document.body;
+        var isNight = false;
+
+        function applyTheme() {
+          body.dataset.theme = isNight ? "night" : "day";
+          text.textContent = isNight ? "☀" : "⏾";
+        }
+
+        toggleButton.addEventListener("click", function () {
+          isNight = !isNight;
+          applyTheme();
+        });
+
+        applyTheme();
+
+        // Modal functionality
+        var modal = document.getElementById("member-modal");
+        var modalPhoto = document.getElementById("modal-photo");
+        var modalNickname = document.getElementById("modal-nickname");
+        var modalFullname = document.getElementById("modal-fullname");
+        var modalBadge = document.getElementById("modal-badge");
+        var modalBirthday = document.getElementById("modal-birthday");
+        var modalClass = document.getElementById("modal-class");
+        var modalIg = document.getElementById("modal-ig");
+        var modalIgText = document.getElementById("modal-ig-text");
+        var closeBtn = modal.querySelector(".member-modal__close");
+        var overlay = modal.querySelector(".member-modal__overlay");
+
+        var cards = document.querySelectorAll(".member-card");
+
+        cards.forEach(function (card) {
+          card.style.cursor = "pointer";
+          card.addEventListener("click", function () {
+            var nickname = card.dataset.nickname;
+            var fullname = card.dataset.fullname;
+            var position = card.dataset.position;
+            var birthday = card.dataset.birthday;
+            var className = card.dataset.class;
+            var ig = card.dataset.ig;
+            var photo = card.dataset.photo;
+
+            modalPhoto.src = photo;
+            modalPhoto.alt = nickname;
+            modalNickname.textContent = nickname;
+            modalFullname.textContent = fullname;
+            modalBadge.textContent = position;
+            modalBirthday.textContent = birthday;
+            modalClass.textContent = className;
+            modalIg.href = "https://instagram.com/" + ig;
+            modalIgText.textContent = "@" + ig;
+
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+          });
+        });
+
+        function closeModal() {
+          modal.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+        overlay.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("active")) {
+            closeModal();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
