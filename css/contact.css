@@ -14,9 +14,18 @@ body[data-theme="night"] .contact-hero {
 }
 
 .contact-hero__icon {
-  font-size: 4rem;
-  margin-bottom: 16px;
-  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-hero__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .contact-hero__title {
@@ -78,15 +87,18 @@ body[data-theme="night"] .contact-card:hover {
 }
 
 .contact-card__icon {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, #aed5e9, #7ec8e3);
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+}
+
+.contact-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .contact-card__title {
@@ -242,7 +254,8 @@ body[data-theme="night"] .location-section__map {
   }
 
   .contact-hero__icon {
-    font-size: 3rem;
+    width: 100px;
+    height: 100px;
   }
 
   .contact-hero__title {
@@ -253,6 +266,11 @@ body[data-theme="night"] .location-section__map {
     padding: 24px 20px;
   }
 
+  .contact-card__icon {
+    width: 85px;
+    height: 85px;
+  }
+
   .social-link {
     width: 50px;
     height: 50px;
@@ -261,6 +279,11 @@ body[data-theme="night"] .location-section__map {
 }
 
 @media (max-width: 480px) {
+  .contact-hero__icon {
+    width: 80px;
+    height: 80px;
+  }
+
   .contact-hero__title {
     font-size: 1.6rem;
   }
@@ -270,9 +293,8 @@ body[data-theme="night"] .location-section__map {
   }
 
   .contact-card__icon {
-    width: 56px;
-    height: 56px;
-    font-size: 1.6rem;
+    width: 70px;
+    height: 70px;
   }
 
   .contact-card__title {

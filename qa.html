@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UDDoubleD</title>
+    <title>UDDoubleD - Q&A</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/qa.css" />
   </head>
   <body>
     <img
@@ -37,29 +38,92 @@
     </header>
 
     <main class="page">
-      <section id="home" class="section">
-        <h1>ยินดีต้อนรับสู่พรรคสภานักเรียน เบอร์ 1</h1>
-        <p>ร่วมกันสร้างโรงเรียนที่น่าอยู่และเป็นมิตรกับทุกคน</p>
-      </section>
-      <section id="members" class="section">
-        <h2>สมาชิก</h2>
-        <p>แนะนำทีมงานและตัวแทนของพรรค</p>
-      </section>
-      <section id="policy" class="section">
-        <h2>นโยบาย</h2>
-        <p>รวมนโยบายและแนวทางการพัฒนาของพรรค</p>
-      </section>
-      <section id="contact" class="section">
-        <h2>ติดต่อ</h2>
-        <p>ช่องทางติดต่อและข้อมูลเพิ่มเติม</p>
-      </section>
+
+      <!-- Questions List -->
+      <div class="qa-list-section">
+        <h2 class="qa-list__title">ถาม-ตอบ Q&A</h2>
+        <div class="qa-list" id="qa-list">
+          <!-- Questions will be loaded here -->
+        </div>
+        <p class="qa-list__empty" id="qa-empty">ยังไม่มีคำถามที่ได้รับคำตอบ</p>
+      </div>
     </main>
+
     <footer class="site-footer">
-        Copyright © 2026 UDDoubleD. Student Council Udomdarunee School.
+      Copyright © 2026 UDDoubleD. Student Council Udomdarunee School.
     </footer>
+
+    <!-- Floating Action Button -->
+    <button class="qa-fab" id="qa-fab" aria-label="ส่งคำถาม">
+      <span class="qa-fab__icon">❓</span>
+      <span class="qa-fab__text">ถามคำถาม</span>
+    </button>
+
+    <!-- Question Form Modal -->
+    <div class="qa-form-modal" id="qa-form-modal">
+      <div class="qa-form-modal__overlay"></div>
+      <div class="qa-form-modal__content">
+        <button class="qa-form-modal__close" id="form-modal-close">&times;</button>
+        <h2 class="qa-form-modal__title">ส่งคำถามของคุณ</h2>
+        <form class="qa-form qa-form--modal" id="qa-form-modal-form">
+          <div class="qa-form__group">
+            <label class="qa-form__label" for="qa-name-modal">ชื่อของคุณ (ไม่บังคับ)</label>
+            <input 
+              type="text" 
+              class="qa-form__input" 
+              id="qa-name-modal" 
+              name="name" 
+              placeholder="Anonymous"
+            />
+          </div>
+
+          <div class="qa-form__group">
+            <label class="qa-form__label" for="qa-category-modal">หมวดหมู่ <span class="required">*</span></label>
+            <select class="qa-form__select" id="qa-category-modal" name="category" required>
+              <option value="">-- เลือกหมวดหมู่ --</option>
+              <option value="สิ่งของ">ปัญหาสิ่งของ</option>
+              <option value="การเรียน">ปัญหาการเรียน</option>
+              <option value="ภายในโรงเรียน">ปัญหาภายในโรงเรียน</option>
+              <option value="อาหาร">ปัญหาเรื่องอาหาร</option>
+              <option value="อื่นๆ">ปัญหาอื่นๆ</option>
+            </select>
+          </div>
+
+          <div class="qa-form__group">
+            <label class="qa-form__label" for="qa-question-modal">คำถามของคุณ <span class="required">*</span></label>
+            <textarea 
+              class="qa-form__textarea" 
+              id="qa-question-modal" 
+              name="question" 
+              rows="5" 
+              placeholder="พิมพ์คำถามหรือปัญหาของคุณที่นี่..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="qa-form__submit">
+            <span class="submit-icon">📨</span>
+            ส่งคำถาม
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="qa-modal" id="qa-modal">
+      <div class="qa-modal__overlay"></div>
+      <div class="qa-modal__content">
+        <div class="qa-modal__icon">✅</div>
+        <h3 class="qa-modal__title">ส่งคำถามสำเร็จ!</h3>
+        <p class="qa-modal__text">คำถามของคุณถูกส่งเรียบร้อยแล้ว รอรับคำตอบได้เลย</p>
+        <button class="qa-modal__btn" id="modal-close">ตกลง</button>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="js/theme.js"></script>
     <script src="js/cookie-consent.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/qa.js"></script>
   </body>
 </html>
