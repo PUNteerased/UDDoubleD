@@ -208,7 +208,7 @@ body[data-theme="night"] .members-group-title {
 .member-card {
   position: relative;
   width: 340px;
-  background: linear-gradient(145deg, #ffffff, #f0f6fa);
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
   border-radius: 20px;
   padding: 40px 32px 36px;
   box-shadow: 
@@ -217,6 +217,17 @@ body[data-theme="night"] .members-group-title {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   cursor: pointer;
+}
+
+/* Gradient top bar for all cards */
+.member-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #df354d, #dfbe07, #5a99ff);
 }
 
 body[data-theme="night"] .member-card {
@@ -229,8 +240,8 @@ body[data-theme="night"] .member-card {
 .member-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 
-    0 20px 60px rgba(46, 91, 120, 0.18),
-    0 4px 12px rgba(0, 0, 0, 0.08);
+    0 20px 60px rgba(223, 53, 77, 0.15),
+    0 4px 12px rgba(90, 153, 255, 0.1);
 }
 
 .member-card:active {
@@ -240,52 +251,7 @@ body[data-theme="night"] .member-card {
 body[data-theme="night"] .member-card:hover {
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.45),
-    0 4px 12px rgba(0, 0, 0, 0.35);
-}
-
-/* President Card - Special Styling */
-.member-card--president {
-  background: linear-gradient(145deg, #ffffff, #e8f4fa);
-}
-
-.member-card--president::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: linear-gradient(90deg, #f0c14b, #d4a934, #f0c14b);
-}
-
-body[data-theme="night"] .member-card--president {
-  background: linear-gradient(145deg, #242e38, #1a2229);
-}
-
-body[data-theme="night"] .member-card--president::before {
-  background: linear-gradient(90deg, #d4a934, #b8932a, #d4a934);
-}
-
-/* Vice President Card */
-.member-card--vice::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #7ec8e3, #5ba3c4, #7ec8e3);
-}
-
-/* Committee Card */
-.member-card--committee::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #aed5e9, #7ec8e3, #aed5e9);
+    0 4px 12px rgba(90, 153, 255, 0.15);
 }
 
 /* Badge */
@@ -296,15 +262,15 @@ body[data-theme="night"] .member-card--president::before {
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #5ba3c4, #2c5f7c);
-  color: #fff;
+  background: #f9fbfd;
+  color: #1f2a30;
+  box-shadow: 0 2px 8px rgba(31, 42, 48, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.member-card--president .member-card__badge {
-  background: linear-gradient(135deg, #f0c14b, #d4a934);
-  color: #1a1a0a;
-  font-size: 0.9rem;
-  padding: 8px 20px;
+body[data-theme="night"] .member-card__badge {
+  background: #0f1418;
+  color: #e6edf2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Photo - 2:3 Aspect Ratio (Portrait) */
@@ -315,14 +281,10 @@ body[data-theme="night"] .member-card--president::before {
   margin: 0 0 20px;
   border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(135deg, #aed5e9, #7ec8e3);
+  background: linear-gradient(135deg, #df354d, #dfbe07, #5a99ff);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.member-card--president .member-card__photo {
-  background: linear-gradient(135deg, #f0c14b, #d4a934);
 }
 
 .member-card__photo img {
@@ -336,10 +298,6 @@ body[data-theme="night"] .member-card--president::before {
   font-size: 3rem;
   opacity: 0.6;
   z-index: 0;
-}
-
-.member-card--president .member-card__photo-placeholder {
-  font-size: 4rem;
 }
 
 .member-card__photo img:not([style*="display: none"]) + .member-card__photo-placeholder {
