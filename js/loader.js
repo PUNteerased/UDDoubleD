@@ -1,6 +1,7 @@
 /**
  * Page Loader
- * แสดง loading animation พร้อม progress bar
+ * แสดง loading animation พร้อม progress bar ตามการโหลดจริง
+ * ขั้นต่ำ 1.5 วินาที
  */
 (function() {
   var loader = document.getElementById('page-loader');
@@ -9,65 +10,112 @@
   
   if (!loader || !progressBar || !percentText) return;
 
-  var progress = 0;
+  var MIN_LOAD_TIME = 1500; // ขั้นต่ำ 1.5 วินาที
+  var startTime = Date.now();
+  var currentProgress = 0;
   var targetProgress = 0;
-  var interval;
+  var animationFrame;
+  var isComplete = false;
 
-  // Simulate loading progress
-  function updateProgress() {
-    if (progress < targetProgress) {
-      progress += 1;
-      progressBar.style.width = progress + '%';
-      percentText.textContent = progress + '%';
+  // Get all resources to track
+  var images = document.images;
+  var totalResources = images.length + 1; // +1 for DOM
+  var loadedResources = 0;
+
+  // Update progress bar smoothly
+  function animateProgress() {
+    if (currentProgress < targetProgress) {
+      currentProgress += Math.max(1, (targetProgress - currentProgress) * 0.1);
+      if (currentProgress > targetProgress) currentProgress = targetProgress;
+      
+      var displayProgress = Math.round(currentProgress);
+      progressBar.style.width = displayProgress + '%';
+      percentText.textContent = displayProgress + '%';
     }
     
-    if (progress >= 100) {
-      clearInterval(interval);
-      setTimeout(function() {
-        loader.classList.add('loaded');
-        document.body.style.overflow = '';
-      }, 300);
+    if (currentProgress < 100 || !isComplete) {
+      animationFrame = requestAnimationFrame(animateProgress);
     }
   }
 
-  // Start loading simulation
-  function startLoading() {
-    document.body.style.overflow = 'hidden';
-    
-    // Phase 1: Quick start (0-30%)
-    targetProgress = 30;
-    interval = setInterval(updateProgress, 20);
-    
-    // Phase 2: Medium progress (30-70%)
-    setTimeout(function() {
-      targetProgress = 70;
-    }, 500);
-    
-    // Phase 3: Almost done (70-90%)
-    setTimeout(function() {
-      targetProgress = 90;
-    }, 1000);
+  // Calculate progress based on loaded resources
+  function updateResourceProgress() {
+    loadedResources++;
+    var resourceProgress = (loadedResources / totalResources) * 100;
+    targetProgress = Math.min(95, resourceProgress); // Cap at 95% until fully loaded
   }
 
-  // Complete loading when page is fully loaded
+  // Track image loading
+  function trackImages() {
+    for (var i = 0; i < images.length; i++) {
+      if (images[i].complete) {
+        loadedResources++;
+      } else {
+        images[i].addEventListener('load', updateResourceProgress);
+        images[i].addEventListener('error', updateResourceProgress);
+      }
+    }
+    // Update initial progress
+    targetProgress = Math.min(95, (loadedResources / totalResources) * 100);
+  }
+
+  // Complete loading
   function completeLoading() {
-    targetProgress = 100;
+    var elapsedTime = Date.now() - startTime;
+    var remainingTime = Math.max(0, MIN_LOAD_TIME - elapsedTime);
+
+    // Wait for minimum time before completing
+    setTimeout(function() {
+      targetProgress = 100;
+      isComplete = true;
+      
+      // Wait for animation to reach 100%
+      var checkComplete = setInterval(function() {
+        if (currentProgress >= 99) {
+          clearInterval(checkComplete);
+          currentProgress = 100;
+          progressBar.style.width = '100%';
+          percentText.textContent = '100%';
+          
+          setTimeout(function() {
+            loader.classList.add('loaded');
+            document.body.style.overflow = '';
+            cancelAnimationFrame(animationFrame);
+          }, 200);
+        }
+      }, 50);
+    }, remainingTime);
   }
 
   // Initialize
-  startLoading();
+  function init() {
+    document.body.style.overflow = 'hidden';
+    
+    // Start with small progress for DOM ready
+    targetProgress = 10;
+    
+    // Track images
+    trackImages();
+    
+    // Start animation
+    animateProgress();
 
-  // Wait for all resources to load
-  if (document.readyState === 'complete') {
-    completeLoading();
-  } else {
-    window.addEventListener('load', completeLoading);
+    // When DOM is ready
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      targetProgress = Math.max(targetProgress, 30);
+    } else {
+      document.addEventListener('DOMContentLoaded', function() {
+        targetProgress = Math.max(targetProgress, 30);
+      });
+    }
+
+    // When page is fully loaded
+    if (document.readyState === 'complete') {
+      completeLoading();
+    } else {
+      window.addEventListener('load', completeLoading);
+    }
   }
 
-  // Fallback: Force complete after 3 seconds
-  setTimeout(function() {
-    if (progress < 100) {
-      targetProgress = 100;
-    }
-  }, 3000);
+  init();
 })();
