@@ -793,8 +793,7 @@ body[data-theme="night"] .qa-modal__author {
   align-items: center;
   gap: 12px;
   padding: 18px 28px;
-  background: linear-gradient(135deg, #df354d, #dfbe07, #5a99ff);
-  background-size: 200% 200%;
+  background: #1f2a30;
   border: none;
   border-radius: 50px;
   color: #fff;
@@ -802,32 +801,41 @@ body[data-theme="night"] .qa-modal__author {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 
-    0 8px 32px rgba(223, 53, 77, 0.35),
+    0 8px 32px rgba(0, 0, 0, 0.25),
     0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fab-pulse 2s ease-in-out infinite;
 }
 
+body[data-theme="night"] .qa-fab {
+  background: #f9fbfd;
+  color: #1f2a30;
+}
+
 @keyframes fab-pulse {
   0%, 100% {
     box-shadow: 
-      0 8px 32px rgba(223, 53, 77, 0.35),
+      0 8px 32px rgba(0, 0, 0, 0.25),
       0 4px 12px rgba(0, 0, 0, 0.15);
   }
   50% {
     box-shadow: 
-      0 12px 40px rgba(223, 53, 77, 0.5),
+      0 12px 40px rgba(0, 0, 0, 0.35),
       0 6px 16px rgba(0, 0, 0, 0.2);
   }
 }
 
 .qa-fab:hover {
   transform: translateY(-4px) scale(1.05);
-  background-position: 100% 0;
+  background: #0f1418;
   box-shadow: 
-    0 14px 45px rgba(223, 53, 77, 0.45),
+    0 14px 45px rgba(0, 0, 0, 0.35),
     0 8px 20px rgba(0, 0, 0, 0.2);
   animation: none;
+}
+
+body[data-theme="night"] .qa-fab:hover {
+  background: #e6edf2;
 }
 
 .qa-fab:active {
