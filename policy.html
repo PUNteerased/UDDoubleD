@@ -6,8 +6,21 @@
     <title>UDDoubleD - นโยบาย</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/loader.css" />
   </head>
   <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+      <div class="page-loader__logo">
+        <img src="image/logonobg.png" alt="Loading..." />
+      </div>
+      <p class="page-loader__text">กำลังโหลด...</p>
+      <div class="page-loader__progress">
+        <div class="page-loader__progress-bar" id="loader-progress-bar"></div>
+      </div>
+      <span class="page-loader__percent" id="loader-percent">0%</span>
+    </div>
+
     <img
       src="/image/black_ribbon_top_right.png"
       class="black-ribbon stick-top stick-right"
@@ -47,5 +60,6 @@
     <!-- Scripts -->
     <script src="js/theme.js"></script>
     <script src="js/cookie-consent.js"></script>
+    <script src="js/loader.js"></script>
   </body>
 </html>
