@@ -57,25 +57,9 @@
     <footer class="site-footer">
         Copyright © 2026 UDDoubleD. Student Council Udomdarunee School.
     </footer>
-    <script>
-      (function () {
-        var toggleButton = document.getElementById("theme-toggle");
-        var text = document.getElementById("theme-text");
-        var body = document.body;
-        var isNight = false;
 
-        function applyTheme() {
-          body.dataset.theme = isNight ? "night" : "day";
-          text.textContent = isNight ? "☀" : "⏾";
-        }
-
-        toggleButton.addEventListener("click", function () {
-          isNight = !isNight;
-          applyTheme();
-        });
-
-        applyTheme();
-      })();
-    </script>
+    <!-- Scripts -->
+    <script src="js/theme.js"></script>
+    <script src="js/cookie-consent.js"></script>
   </body>
 </html>
