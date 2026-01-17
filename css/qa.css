@@ -143,18 +143,26 @@ body[data-theme="night"] .qa-form__textarea::placeholder {
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
-  background: linear-gradient(135deg, #df354d, #dfbe07, #5a99ff);
-  background-size: 200% 200%;
+  background: #1f2a30;
   border: none;
   border-radius: 14px;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-position 0.5s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+body[data-theme="night"] .qa-form__submit {
+  background: #f9fbfd;
+  color: #1f2a30;
 }
 
 .qa-form__submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(223, 53, 77, 0.3);
-  background-position: 100% 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  background: #0f1418;
+}
+
+body[data-theme="night"] .qa-form__submit:hover {
+  background: #e6edf2;
 }
 
 .qa-form__submit:active {
@@ -944,12 +952,12 @@ body[data-theme="night"] .qa-form-modal__close:hover {
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 28px;
-  color: var(--text-color);
+  color: #1f2a30;
   text-align: center;
-  background: linear-gradient(135deg, #df354d, #dfbe07, #5a99ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+}
+
+body[data-theme="night"] .qa-form-modal__title {
+  color: #e6edf2;
 }
 
 .qa-form--modal .qa-form__group {
