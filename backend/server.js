@@ -1,6 +1,6 @@
 /**
  * Q&A Backend Server
- * Simple Express server for UDDoubleD Q&A system
+ * Simple Express server for UDDoubleDee Q&A system
  * Can be deployed to Vercel, Render, Railway, or any Node.js hosting
  */
 

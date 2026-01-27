@@ -1,7 +1,7 @@
 {
   "name": "uddoubled-qa-backend",
   "version": "1.0.0",
-  "description": "Q&A Backend for UDDoubleD Student Council",
+  "description": "Q&A Backend for UDDoubleDee Student Council",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
